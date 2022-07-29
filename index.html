@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js demo-2">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>3D Book Showcase</title>
+		<meta name="description" content="3D Book Showcase with CSS 3D Transforms" />
+		<meta name="keywords" content="3d transforms, css3 3d, book, jquery, open book, css transitions" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="docs/css/default.css" />
+		<link rel="stylesheet" type="text/css" href="docs/css/component2.css" />
+		<script src="docs/js/modernizr.custom.js"></script>
+		<style>
+			@import url('https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css');
+			@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+			@font-face {
+				font-family: 'GangwonEduPowerExtraBoldA';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
+				font-weight: normal;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'HS-Regular';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/HS-Regular.woff') format('woff');
+				font-weight: normal;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'ulsanjunggu';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/ulsanjunggu.woff2') format('woff2');
+				font-weight: normal;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'HancomUljuBangudae';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205-2@1.0/HancomUljuBangudae.woff2') format('woff2');
+				font-weight: normal;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'DeogonPrincess';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/DeogonPrincess.woff2') format('woff2');
+				font-weight: normal;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'EF_hyunygothic';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/EF_hyunygothic.woff2') format('woff2');
+				font-weight: normal;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'MICEGothic Bold';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/MICEGothic Bold.woff2') format('woff2');
+				font-weight: 700;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'ONE-Mobile-POP';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff') format('woff');
+				font-weight: normal;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'ImcreSoojin';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/ImcreSoojin.woff') format('woff');
+				font-weight: normal;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'EarlyFontDiary';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/EarlyFontDiary.woff2') format('woff2');
+				font-weight: normal;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'OKCHAN';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/OKCHAN.woff2') format('woff2');
+				font-weight: normal;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'DalseoHealingBold';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2207-01@1.0/DalseoHealingBold.woff2') format('woff2');
+				font-weight: 700;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'GilbeotRainbow';
+				src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/GilbeotRainbow.woff') format('woff');
+				font-weight: normal;
+				font-style: normal;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<header class="clearfix">
+				<h1 style="font-family: 'ImcreSoojin';">CREATIVE JUNG MINJI</h1>	
+				<span class="support-note" style="font-family: 'ImcreSoojin';">PORTFOLIO</span>
+			</header>
+			<div class="main">
+				<ul id="bk-list" class="bk-list clearfix">
+					<li>
+						<div class="bk-book book-1">
+							<div class="bk-front">
+								<div class="bk-cover">
+									<h2>
+										<span style="font-family: 'ONE-Mobile-POP'; font-size:1.3em;">아로를 찾아라!</span>
+										<span style="font-family: 'ONE-Mobile-POP';">Min-Ji Jung</span>
+									</h2>
+								</div>
+								<div class="bk-cover-back"></div>
+							</div>
+							<div class="bk-page">
+								<div class="bk-content bk-content-current">
+									<div style="width:100%;">
+									<a href="https://blog.naver.com/saa0109/222745102314" style="text-decoration-line: none;"><img src="docs/images/img9.png" style="width:100%;"/></a>
+									</div>
+									<p style="font-family: 'NanumSquare'; font-weight: 700; font-size:0.8em; text-align:center;"><br>강아지 아로가 제주도 들판과<br>바다에서 뛰어놀며 여행을 즐기는 모습</p>
+								</div>
+								<div class="bk-content">
+									<p style="font-family: 'NanumSquare'; font-weight: 500; font-size:0.9em; text-align:center;">
+										<br>제작 기간 : 2일
+										<br>참여도 : 모션 + 소리작업 100% (일러스트 제외)
+										<br>
+										<br>
+										<br>
+										<a href="https://blog.naver.com/saa0109/222745102314" style="text-decoration-line: none;"><img src="docs/images/blog_icon.png" style="width:40%;"/></a>
+									</p>
+								</div>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+								<h2>
+									<span style="font-family: 'ONE-Mobile-POP'; font-size:1.3em;">아로를 찾아라!</span>
+									<span style="font-family: 'ONE-Mobile-POP';">Min-Ji Jung</span>
+								</h2>
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+						</div>
+					</li>
+					<li>
+						<div class="bk-book book-4">
+							<div class="bk-front">
+								<div class="bk-cover">
+									<h2>
+										<span style="font-family: 'EarlyFontDiary'; font-size:1.2em;">빵! 빵! 지나갑니다</span>
+										<span style="font-family: 'EarlyFontDiary'; font-size:0.4em;">정민지</span>
+									</h2>
+								</div>
+								<div class="bk-cover-back"></div>
+							</div>
+							<div class="bk-page">
+								<div class="bk-content">
+									<div style="width:100%;">
+									<a href="https://blog.naver.com/saa0109/222745105903" style="text-decoration-line: none;"><img src="docs/images/img7.png" style="width:100%;"/></a>
+									</div>
+									<p style="font-family: 'NanumSquare'; font-weight: 700; font-size:0.8em; text-align:center;"><br>금강산으로 차를 타고<br>소풍을 가는 동물 친구들</p>
+								</div>
+								<div class="bk-content">
+									<p style="font-family: 'NanumSquare'; font-weight: 500; font-size:0.9em; text-align:center;">
+										<br>제작 기간 : 5시간
+										<br>참여도 : 모션 + 소리작업 100% (일러스트 제외)
+										<br>
+										<br>
+										<br>
+										<a href="https://blog.naver.com/saa0109/222745105903" style="text-decoration-line: none;"><img src="docs/images/blog_icon.png" style="width:40%;"/></a>
+									</p>
+								</div>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+								<h2>
+									<span style="font-family: 'EarlyFontDiary';  font-size:1.5em;">빵! 빵! 지나갑니다</span>
+									<span style="font-family: 'EarlyFontDiary'; font-size:0.7em;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;정민지 지음</span>
+								</h2>
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+						</div>
+					</li>
+					<li>
+						<div class="bk-book book-5">
+							<div class="bk-front">
+								<div class="bk-cover">
+									<h2>
+										<span style="font-family: 'OKCHAN'; font-size:1.3em;"><br>아로&nbsp;vs&nbsp;얼음</span>
+										<span style="font-family: 'DalseoHealingBold'; font-size:0.7em;">정민지</span>
+									</h2>
+								</div>
+								<div class="bk-cover-back"></div>
+							</div>
+							<div class="bk-page">
+								<div class="bk-content">
+									<div style="width:100%;">
+									<a href="https://blog.naver.com/saa0109/222745110302" style="text-decoration-line: none;"><img src="docs/images/img8.png" style="width:80%; margin:0 0 0 20px;"/></a>
+									</div>
+									<p style="font-family: 'NanumSquare'; font-weight: 700; font-size:0.8em; text-align:center;">RPG 아로 vs 얼음</p>
+								</div>
+								<div class="bk-content bk-content-current">
+									<p style="font-family: 'NanumSquare'; font-weight: 500; font-size:0.9em; text-align:center;">
+										<br>제작 기간 : 3일
+										<br>참여도 : 모션 + 컷편집 100%
+										<br>(일러스트 제외)
+										<br>
+										<br>
+										<a href="https://blog.naver.com/saa0109/222745110302" style="text-decoration-line: none;"><img src="docs/images/blog_icon.png" style="width:40%;"/></a>
+									</p>
+								</div>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+								<h2>
+									<span style="font-family: 'OKCHAN'; font-size:1.5em;">아로 vs 얼음</span>
+									<span style="font-family: 'DalseoHealingBold';">정민지 지음</span>
+								</h2>
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+						</div>
+					</li>
+					<li>
+						<div class="bk-book book-7">
+							<div class="bk-front">
+								<div class="bk-cover">
+									<h2>
+										<span style="font-family: 'MICEGothic Bold';">정민지</span>
+										<span style="font-family: 'GilbeotRainbow';">꼬끼오! 꼭꼬꼭!</span>
+									</h2>
+								</div>
+								<div class="bk-cover-back"></div>
+							</div>
+							<div class="bk-page">
+								<div class="bk-content">
+									<div style="width:100%;">
+									<a href="https://blog.naver.com/saa0109/222745115131" style="text-decoration-line: none;"><img src="docs/images/img6.png" style="width:100%;"/></a>
+									</div>
+									<p style="font-family: 'NanumSquare'; font-weight: 700; font-size:0.8em; text-align:center;"><br>행복한 꼬꼬 가족들</p>
+								</div>
+								<div class="bk-content bk-content-current">
+									<p style="font-family: 'NanumSquare'; font-weight: 500; font-size:0.9em; text-align:center;">
+										<br>제작 기간 : 2일
+										<br>참여도 : 모션 + 소리작업 100%
+										<br>(일러스트 제외)
+										<br>
+										<br>
+										<a href="https://blog.naver.com/saa0109/222745115131" style="text-decoration-line: none;"><img src="docs/images/blog_icon.png" style="width:40%;"/></a>
+									</p>
+								</div>
+							</div>
+							<div class="bk-back">
+								<p></p>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+								<h2>
+									<span style="font-family: 'MICEGothic Bold';">정민지</span>
+									<span style="font-family: 'GilbeotRainbow';">꼬끼오! 꼭꼬꼭!</span>
+								</h2>
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+						</div>
+					</li>
+					<li>
+						<div class="bk-book book-3">
+							<div class="bk-front">
+								<div class="bk-cover">
+									<h2>
+										<span style="font-family: 'Galmuri7'; font-size:1.6em;">아로와<br>주머니 괴물</span>
+										<span style="font-family: 'Galmuri9'; font-size:0.7em;"><br>정민지</span>
+									</h2>
+								</div>
+								<div class="bk-cover-back"></div>
+							</div>
+							<div class="bk-page">
+								<div class="bk-content">
+									<iframe width="100%" src="https://www.youtube.com/embed/KVYMEuq7sQY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									<p style="font-family: 'NanumSquare'; font-weight: 700; font-size:0.8em; text-align:center;"><br>주변 사물 주머니 괴물들과 싸우는 아로<br>(포켓몬스터 패러디)</p>
+								</div>
+								<div class="bk-content">
+									<p style="font-family: 'NanumSquare'; font-weight: 500; font-size:0.9em; text-align:center;">
+										<br>제작 기간 : 5일
+										<br>참여도 : 모션 100%
+										<br>(일러스트 제외)
+										<br>
+										<br>
+										<a href="https://blog.naver.com/saa0109/222745130201" style="text-decoration-line: none;"><img src="docs/images/blog_icon.png" style="width:40%;"/></a>
+									</p>
+								</div>
+							</div>
+							<div class="bk-back">
+								<p></p>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+								<h2>
+									<span style="font-family: 'Galmuri7'; font-size:1.3em;">아로와 주머니 괴물&nbsp;</span>
+									<span style="font-family: 'Galmuri9'; font-size:0.8em;">정민지</span>
+								</h2>
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+						</div>
+					</li>
+					<li>
+						<div class="bk-book book-6">
+							<div class="bk-front">
+								<div class="bk-cover">
+									<h2>
+										<span style="font-family: 'EF_hyunygothic'; font-size:1.7em;">쥬얼리 공방</span>
+										<span style="font-family: 'EF_hyunygothic'; font-size:1em;">정민지</span>
+									</h2>
+								</div>
+								<div class="bk-cover-back"></div>
+							</div>
+							<div class="bk-page">
+								<div class="bk-content">
+									<div style="width:100%;">
+									<a href="https://blog.naver.com/saa0109/222745142605" style="text-decoration-line: none;"><img src="docs/images/img11.png" style="width:100%;"/></a>
+									</div>
+									<p style="font-family: 'NanumSquare'; font-weight: 700; font-size:0.8em; text-align:center;"><br>서프라이즈 팔찌 만들기 대작전</p>
+								</div>
+								<div class="bk-content bk-content-current">
+									<p style="font-family: 'NanumSquare'; font-weight: 500; font-size:0.9em; text-align:center;">
+										<br>제작 기간 : 9일
+										<br>참여도 : 모션 + 소리작업 100%
+										<br>(일러스트 제외)
+										<br>
+										<br>
+										<a href="https://blog.naver.com/saa0109/222745142605" style="text-decoration-line: none;"><img src="docs/images/blog_icon.png" style="width:40%;"/></a>
+									</p>
+								</div>
+							</div>
+							<div class="bk-back">
+								<p></p>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+								<h2>
+									<span style="font-family: 'EF_hyunygothic'; font-size:1em;">정민지</span>
+									<span style="font-family: 'EF_hyunygothic'; font-size:1em;">쥬얼리 공방</span>
+								</h2>
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+						</div>
+					</li>
+					<li>
+						<div class="bk-book book-8">
+							<div class="bk-front">
+								<div class="bk-cover">
+									<h2>
+										<span style="font-family: 'HancomUljuBangudae';">정민지</span>
+										<span style="font-family: 'HancomUljuBangudae';">아로와 아카데미 친구들</span>
+									</h2>
+								</div>
+								<div class="bk-cover-back"></div>
+							</div>
+							<div class="bk-page">
+								<div class="bk-content">
+									<div style="width:100%;">
+									<a href="https://blog.naver.com/saa0109/222745161212" style="text-decoration-line: none;"><img src="docs/images/img10.png" style="width:100%;"/></a>
+									</div>
+									<p style="font-family: 'NanumSquare'; font-weight: 700; font-size:0.8em; text-align:center;"><br>아로와 함께 배우는<br>창작미술, 전통문화,<br>세계언어, 공예창작 시간</p>
+								</div>
+								<div class="bk-content bk-content-current">
+									<p style="font-family: 'NanumSquare'; font-weight: 500; font-size:0.9em; text-align:center;">
+										<br>제작 기간 : 3일
+										<br>참여도
+										<br>00:52 - 01:03 모션 전체
+										<br>01:04 - 01:27 배경 모션
+										<br>02:04 - 02:18 캐릭터 제외 모션
+										<br>02:19 - 02:32 전체 모션
+										<br style="-webkit-transform: rotate(90deg);">...
+										<br>+ 소리 작업
+										<br>(목소리 녹음 제외, 일러스트 제외)
+										<br>
+										<br>
+										<a href="https://blog.naver.com/saa0109/222745161212" style="text-decoration-line: none;"><img src="docs/images/blog_icon.png" style="width:40%;"/></a>
+									</p>
+								</div>
+							</div>
+							<div class="bk-back">
+								<p></p>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+								<h2>
+									<span style="font-family: 'HancomUljuBangudae'; font-size:1em;">아로와 아카데미 친구들</span>
+									<span style="font-family: 'HancomUljuBangudae';">정민지</span>
+								</h2>
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+						</div>
+					</li>
+					<li>
+						<div class="bk-book book-2">
+							<div class="bk-front">
+								<div class="bk-cover">
+									<h2>
+										<span style="font-family: 'DeogonPrincess'; font-size:0.5em;"><br>지금 우리 아로는</span>
+										<span style="font-family: 'DeogonPrincess'; font-size:0.2em;">정민지</span>
+									</h2>
+								</div>
+								<div class="bk-cover-back"></div>
+							</div>
+							<div class="bk-page">
+								<div class="bk-content">
+									<div style="width:100%;">
+									<a href="https://blog.naver.com/saa0109/222745171600" style="text-decoration-line: none;"><img src="docs/images/img12.png" style="width:100%;"/></a>
+									</div>
+									<p style="font-family: 'NanumSquare'; font-weight: 700; font-size:0.8em; text-align:center;"><br>지금 우리 아로는<br>(지금 우리 학교는 패러디)</p>
+								</div>
+								<div class="bk-content">
+									<p style="font-family: 'NanumSquare'; font-weight: 500; font-size:0.9em; text-align:center;">
+										<br>제작 기간 : 2일
+										<br>참여도 : 모션 + 소리작업 100%
+										<br>(일러스트 제외)
+										<br>
+										<br>
+										<a href="https://blog.naver.com/saa0109/222745171600" style="text-decoration-line: none;"><img src="docs/images/blog_icon.png" style="width:40%;"/></a>
+									</p>
+								</div>
+							</div>
+							<div class="bk-back">
+								<p></p>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+								<h2>
+									<span style="font-family: 'DeogonPrincess';">지금 우리 아로는&nbsp;</span>
+									<span style="font-family: 'DeogonPrincess';">정민지</span>
+								</h2>
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+						</div>
+					</li>
+					<li>
+						<div class="bk-book book-9">
+							<div class="bk-front">
+								<div class="bk-cover">
+									<h2>
+										<span style="font-family: 'ulsanjunggu';">정민지</span>
+										<span style="font-family: 'ulsanjunggu'; font-size:1.5em;">메겨라 받아라</span>
+									</h2>
+								</div>
+								<div class="bk-cover-back"></div>
+							</div>
+							<div class="bk-page">
+								<div class="bk-content">
+									<iframe width="100%" src="https://www.youtube.com/embed/tSLtCXN106Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									<p style="font-family: 'NanumSquare'; font-weight: 700; font-size:0.8em; text-align:center;"><span style="color:#2E2E2E;"><br>국립국악원 창작국악동요<br>공모전 대상 수상작</span><br><br>국악동요에 어울리는 한국적인 움직임</p>
+								</div>
+								<div class="bk-content bk-content-current">
+									<p style="font-family: 'NanumSquare'; font-weight: 500; font-size:0.9em; text-align:center;">
+										<br>제작 기간 : 7일
+										<br>참여도 : 모션 100%
+										<br>(일러스트 제외)
+										<br>
+										<br>
+										<a href="https://blog.naver.com/saa0109/222811424657" style="text-decoration-line: none;"><img src="docs/images/blog_icon.png" style="width:40%;"/></a>
+									</p>
+								</div>
+							</div>
+							<div class="bk-back">
+								<img src="docs/images/9.png" alt="cat"/>
+								<p></p>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+								<h2>
+									<span style="font-family: 'ulsanjunggu';">정민지</span>
+									<span style="font-family: 'ulsanjunggu'; font-size:1.5em;">메겨라 받아라</span>
+								</h2>
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+						</div>
+					</li>
+					<li>
+						<div class="bk-book book-10">
+							<div class="bk-front">
+								<div class="bk-cover">
+									<h2>
+										<span style="font-family: 'HS-Regular';">정민지</span>
+										<span style="font-family: 'HS-Regular'; font-size:1.5em;">워드래빗</span>
+									</h2>
+								</div>
+								<div class="bk-cover-back"></div>
+							</div>
+							<div class="bk-page">
+								<div class="bk-content">
+									<div style="width:100%;">
+									<a href="https://blog.naver.com/saa0109/222821016879" style="text-decoration-line: none;"><img src="docs/images/img5.png" style="width:100%;"/></a>
+									</div>
+									<p style="font-family: 'NanumSquare'; font-weight: 700; font-size:0.8em; text-align:center;"><br>쉽고 간단한<br>영어 단어 배움을 위한<br>워드래빗</p>
+									<p style="font-family: 'NanumSquare'; font-weight: 500; font-size:0.9em; text-align:center;">
+										<br>제작 기간 : 3일
+										<br>참여도 : 모션 + bgm 작업 100%
+										<br>(일러스트 제외)
+									</p>
+								</div>
+								<div class="bk-content">
+									<div style="width:100%;">
+									<a href="https://blog.naver.com/saa0109/222821016879" style="text-decoration-line: none;"><img src="docs/images/img1.png" style="width:100%;"/></a>
+									</div>
+									<p style="font-family: 'NanumSquare'; font-weight: 500; font-size:0.9em; text-align:center;">
+										<br>제작 기간 : 6일
+										<br>참여도 : 모션 + bgm 작업 100%
+										<br>(일러스트 제외)
+									</p>
+								</div>
+								<div class="bk-content">
+									<div style="width:100%;">
+									<a href="https://blog.naver.com/saa0109/222821016879" style="text-decoration-line: none;"><img src="docs/images/img2.png" style="width:100%;"/></a>
+									</div>
+									<p style="font-family: 'NanumSquare'; font-weight: 500; font-size:0.9em; text-align:center;">
+										<br>제작 기간 : 7일
+										<br>참여도 : 모션 + bgm 작업 100%
+										<br>(일러스트 제외)
+									</p>
+								</div>
+								<div class="bk-content">
+									<div style="width:100%;">
+									<a href="https://blog.naver.com/saa0109/222821016879" style="text-decoration-line: none;"><img src="docs/images/img3.png" style="width:100%;"/></a>
+									</div>
+									<p style="font-family: 'NanumSquare'; font-weight: 500; font-size:0.9em; text-align:center;">
+										<br>제작 기간 : 8일
+										<br>참여도 : 모션 + bgm 작업 100%
+										<br>(일러스트 제외)
+									</p>
+								</div>
+								<div class="bk-content">
+									<div style="width:100%;">
+									<a href="https://blog.naver.com/saa0109/222821016879" style="text-decoration-line: none;"><img src="docs/images/img4.png" style="width:100%;"/></a>
+									</div>
+									<p style="font-family: 'NanumSquare'; font-weight: 500; font-size:0.9em; text-align:center;">
+										<br>제작 기간 : 7일
+										<br>참여도 : 모션 + bgm 작업 100%
+										<br>(일러스트 제외)
+										<br>
+										<br>
+										<a href="https://blog.naver.com/saa0109/222821016879" style="text-decoration-line: none;"><img src="docs/images/blog_icon.png" style="width:40%;"/></a>
+									</p>
+								</div>
+							</div>
+							<div class="bk-back">
+								<p></p>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+								<h2>
+									<span style="font-family: 'HS-Regular';">정민지</span>
+									<span style="font-family: 'HS-Regular';">워드래빗</span>
+								</h2>
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+						</div>
+					</li>
+					<li>
+						<div class="bk-book book-11">
+							<div class="bk-front">
+								<div class="bk-cover">
+									<h2>
+										<span style="font-family: 'GangwonEduPowerExtraBoldA'; font-size:0.5em;">자기<br>소개서</span>
+										<span style="font-family: 'GangwonEduPowerExtraBoldA'; font-size:0.2em;">정민지</span>
+									</h2>
+								</div>
+								<div class="bk-cover-back"></div>
+							</div>
+							<div class="bk-page">
+								<div class="bk-content">
+									<p style="font-family: 'NanumSquare'; font-weight: 500; font-size:0.8em;">지루함 속에서 찾아낸 나의 관심<br><br>
+학창 시절부터 새로운 배움을 즐겼습니다. 어렸을 때는 새로운 배움을 즐겨도 걱정이 없었지만 고등학생 때는 새로운 배움만 쫓기 에는 그 배움이 저의 꿈까지는 도달하지는 않았기에 대학 진학을 해야 한다는 생각에 진정으로 원하는 배움에 대한 생각은 뒤로한 채 대학 진학을 위해 힘썼습니다. 그렇게 들어간 대학교 강의에서도 늘 최선을 다했지만 정말 제가 원하고 즐겁다는 생각이 들지 않아서 회의감이 들었습니다.
+그러다 대학교 실습의 한 강의에서 광안리 v-log라는 주제를 갖고</p>
+								</div>
+								<div class="bk-content">
+									<p style="font-family: 'NanumSquare'; font-weight: 500; font-size:0.8em;">기획과 촬영, 편집을 했습니다. 실습 과목이고 전공 지식 습득보다는 프로그램을 다뤄야 했기에 다른 전공 과목에 집중할 수도 있었지만 저는 조원과 최선을 다했고 결과도 A+라는 좋은 성적과 다른 사람들에게도 좋은 평을 얻을 수 있었습니다. 작품에 좋은 평을 들을 때 뿌듯함이 듦과 동시에 다른 사람에게 좋은 반응을 이끌 수 있는 다른 콘텐츠들도 만들고 싶다는 생각이 들었습니다.
+원하는 것을 알게 된 저는 먼저 콘텐츠 제작에 필요한 프로그램을 익히기 위해서 after effect, illustrator, photoshop의 기초 강의들을 수강 했습니다. 그러다 모션 그래픽이라는 그래픽 영상을 알게 되었고 </p>
+								</div>
+								<div class="bk-content">
+									<p style="font-family: 'NanumSquare'; font-weight: 500; font-size:0.8em;">영상의 모든 움직임을 프로그램으로 창조한다는 점이 매력적이어서 더 깊게 공부하고 프로그램들의 사용법을 익혔습니다.</p>
+								</div>
+								<div class="bk-content">
+									<p style="font-family: 'NanumSquare'; font-weight: 500; font-size:0.8em;">완벽함을 추구하기 전 필요했던 것<br><br>
+저는 주어진 일을 수행할 때 완벽을 추구한다는 장점을 가지고 있습니다. 하지만 이런 장점이 때로는 다른 성격과 섞여 단점으로 다가올 때도 있었습니다. 저는 완벽을 추구할 뿐만 아니라 저 자신에게 엄격하고 타인만큼 잘 해야 한다는 생각에 늘 만족을 못 했습니다. 이런 성격 탓에 남들처럼 완벽한 마무리를 위해 반복되는 수정을 하다 보니 자연스레 제작하는데 시간이 길어지고 마무리를 짓지 못할 때도 생겼습니다. 대학 시절 과제 수행 시 동기가 리포트를 잘 쓴다는 것이 한눈에 보였습니다.</p>
+								</div>
+								<div class="bk-content">
+									<p style="font-family: 'NanumSquare'; font-weight: 500; font-size:0.8em;">이때 한동안 과제를 제출할 때 그 동기처럼 깔끔해 보이기 위해 최선을 다했지만 마음에 들지 않아서 자꾸 수정만 하다 애매한 내용의 리포트만 제출하게 됐습니다. 항상 그렇게 리포트를 쓰다가 자꾸 비교하게 돼 스트레스를 받아 한 날은 비슷하게 쓰려던 리포트를 다 지워버리고 저만의 표기 방식으로 새로 썼습니다. 그렇게 쓴 리포트는 그전에는 들을 수 없었던 내용도 깔끔하고 잘 정리했다는 교수님의 피드백을 들을 수 있었습니다.
+이 일로 저는 타인을 의식하지 않고 자신이 할 수 있는 최선을 생각하여 그 지점에서 보충하고 보완하면 충분히 좋은 작품을 만들 수 있다는 것을 깨달았습니다.</p>
+								</div>
+								<div class="bk-content">
+									<p style="font-family: 'NanumSquare'; font-weight: 500; font-size:0.8em;">그리고 지나치게 비교를 하고 자신에게 자책을 하는 것보다는 실력을 인지하고 그 실력 내에서 노력을 하는 게 오히려 더 좋은 결과를 낳을 수 있음을 알게 됐습니다. 타인과 비교하면서 자책해서 일의 끝맺음을 제대로 못했던 저는 비교하지 않고 실력 내에서 꼼꼼하게 해내 완벽을 추구하는 장점이 비로소 빛을 발하게 됐습니다.</p>
+								</div>
+								<div class="bk-content">
+									<p style="font-family: 'NanumSquare'; font-weight: 500; font-size:0.8em;">프로젝트를 통해 배운 협동 작업<br><br>
+혼자 작업을 했던 과거와는 달리 회사에서 급한 마감 일정을 맞추기 위해 한 프로젝트를 다른 사원과 협력해서 완성 한 적이 있습니다. 처음으로 협동 작업을 한 터라 막막하기도 한데 급한 마감 일정 때문에 더 부담감 있는 프로젝트였습니다. 급하게 작업을 해야 하니 무작정 반 나눠서 작업을 했는데, 그렇게 하다 보니 겹치는 모션에 각자 다른 모션을 넣게 돼 일관되지 않는 영상 부분이 생겼습니다.
+계속 이렇게 작업하다가는 시간 내에 완성하지도, 일관되지도 않은 영상이 될 것 같아서 아예 겹치는 부분이 없게 나눠서</p>
+								</div>
+								<div class="bk-content">
+									<p style="font-family: 'NanumSquare'; font-weight: 500; font-size:0.8em;">배경 부분이나 캐릭터 별로 따로 영상을 제작 하는게 어떻겠냐고 의견을 내어 스토리 보드에서 정확히 반을 나누지 않고 소스 별로 나누어 영상 제작을 했습니다. 이렇게 작업을 하니 일관성 있는 영상으로 만들어 졌고 시간 내에 영상을 완성 할 수 있었습니다.
+이를 바탕으로 저는 다른 작업자와 소통하면서 업무를 하는 방법을 터득하였고, 효율적으로 일을 완성해내기 위해 책임감을 가지고 고민하고 끝까지 프로젝트를 완성했습니다. 제게 주어진 업무는 어떠한 일이든 해낼 수 있도록 늘 최선을 다 할 것이며 어려운 상황이 직면해도 소통과 협력을 통해 해결 하겠습니다.</p>
+								</div>
+								<div class="bk-content">
+									<p style="font-family: 'NanumSquare'; font-weight: 500; font-size:0.8em;">최선을 다하고 끊임없이<br>노력하는 일원이 되겠습니다!<br><br>
+모션 그래픽에 대해 배우고 제작하면서 배우게 된 것이 있습니다. 첫 번째로, 프로젝트 파일 정리를 깔끔하게 잘 해야 한다는 것입니다. 물론 어느 곳, 어느 제작, 모든 면에서 파일 정리는 깔끔해야 하지만 혼자 작업을 하는 경우에 작업자가 알아보기만 하면 될 거라 생각했었습니다. 그래서 제작할 때 파일 이름만 정리를 하곤 했는데 영상 수정 사항이 생기거나 작업을 나눠서 하는 경우에 수정 사항의 지점을 더 빨리, 나눠서 작업할 때 공동 작업자가 수정할 부분을 더 찾기 쉽고</p>
+								</div>
+								<div class="bk-content">
+									<p style="font-family: 'NanumSquare'; font-weight: 500; font-size:0.8em;">효율적으로 하기 위해 꼭 필요한 것이 깔끔하고 누구나 알기 쉽게 파일을 정리 해야 한다는 것 입니다.<br>두 번째, 성공적인 모션 그래픽이나 모든 영상물 제작에서 가장 필요한 것은 팀원들과 원활한 의사소통, 화합이라는 것 입니다. 회사에서 일하면서 느낀 점은 서로 소통하면서 함께 배우고 힘을 합치면서 좋은 결과물 뿐만 아니라 효율적인 시간 내에 제작 할 수 있다는 것입니다. 의사소통이 잘 안됐던 회사에 들어간 초창기에는 제작하는데 많은 시간이 들어가고 비효율적으로 일을 했었는데
+기획자 분과 프로젝트에 대한 많은 대화와 소통을 하니 작업을 할 때 더 원활하고</p>
+								</div>
+								<div class="bk-content">
+									<p style="font-family: 'NanumSquare'; font-weight: 500; font-size:0.8em;">효율적으로 제작을 할 수 있게 됐습니다. <br>마지막으로 세 번째, 끊임없이 공부하고 성실하고 꾸준해야 한다는 것입니다. 회사 다니는 초창기에는 뒤쳐지는 기분이 들어서 밤낮으로 공부를 하고 연습을 했습니다. 사실 그 초반에는 이렇게 하면 실력이 늘 수 있을까 하는 의문도 들었지만 해보기 전에는 모른다는 생각으로 꾸준히 레퍼런스를 참고하거나 강의를 찾아보면서 연습을 하기도 했습니다. 그렇게 시간이 지나고 나서 처음 작업했던 영상과 마지막 작업했던 영상을 비교해보니 제가 보기에도 확연히 달라졌고 다른 사원도 점점 갈 수록 잘하는 것 같다고 하셨습니다.</p>
+								</div>
+								<div class="bk-content">
+									<p style="font-family: 'NanumSquare'; font-weight: 500; font-size:0.8em;">이렇듯 끊임없이 공부하고 꾸준히 하면 더 좋은 영상을 제작할 수 있고 늘 새로운 방식으로 표현되는 모션 그래픽과 트렌드,영상 기법을 습득하여 더 퀄리티가 좋은 모션 그래픽을 제작할 수 있을거라 믿습니다.<br>이러한 경험과 느낀점을 바탕으로 효율적이고, 팀원들과 협업 하며 성실하고 꾸준하게 하는 것을 보여 드리도록 최선을 다하겠습니다. 또한 일을 배우면서 부족한 부분은 향후 완벽히 보완하여 더 높은 성장을 이뤄내고 싶습니다.</p>
+								</div>
+							</div>
+							<div class="bk-back">
+								<p></p>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+								<h2>
+									<span style="font-family: 'GangwonEduPowerExtraBoldA';">정민지</span>
+									<span style="font-family: 'GangwonEduPowerExtraBoldA';">자기소개서</span>
+								</h2>
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+						</div>
+					</li>
+					<li>
+						<div class="bk-book book-12">
+							<div class="bk-front">
+								<div class="bk-cover">
+									<h2>
+										<span>MinJi Jung</span>
+										<span>Skillsbook</span>
+									</h2>
+								</div>
+								<div class="bk-cover-back"></div>
+							</div>
+							<div class="bk-page">
+								<div class="bk-content bk-content-current">
+									<p style="font-family: 'HancomUljuBangudae';">
+										<img src="docs/images/skill1.png" style="width:30%;"/>&nbsp;&nbsp;&nbsp;&nbsp;Premiere Pro
+									</p>
+									<p style="font-family: 'HancomUljuBangudae';">
+										<img src="docs/images/skill3.png" style="width:30%;"/>&nbsp;&nbsp;&nbsp;&nbsp;aftereffecs
+									</p>
+									<p style="font-family: 'HancomUljuBangudae';">
+										<img src="docs/images/skill2.png" style="width:30%;"/>&nbsp;&nbsp;&nbsp;&nbsp;Photoshop
+									</p>
+									<p style="font-family: 'HancomUljuBangudae';">
+										<img src="docs/images/skill4.png" style="width:30%;"/>&nbsp;&nbsp;&nbsp;&nbsp;Illustrator
+									</p>
+								</div>
+							</div>
+							<div class="bk-back">
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+								<h2>
+									<span>MinJi Jung</span>
+									<span>Skillsbook</span>
+								</h2>
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+						</div>
+					</li>
+					<li>
+						<div class="bk-book book-13">
+							<div class="bk-front">
+								<div class="bk-cover">
+									<h2>
+										<span style="font-family: 'HancomUljuBangudae';">Contact Me!</span>
+									</h2>
+								</div>
+								<div class="bk-cover-back"></div>
+							</div>
+							<div class="bk-page">
+								<div class="bk-content bk-content-current">
+									<p style="font-family: 'NanumSquare'; font-weight: 500; font-size:0.8em;">
+									<br>이름 : 정민지
+									<br>이메일 주소 : saa0109@naver.com</a>
+									<br>연락처 : 010-8834-4188
+									<br>
+									<br>
+									<img src="docs/images/mong.gif" style="width:100%;"/>
+									</p>
+								</div>
+							</div>
+							<div class="bk-back">
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+								<h2>
+									<span style="font-family: 'HancomUljuBangudae';">Contact Me!</span>
+								</h2>
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+						</div>
+					</li>
+				</ul>
+				<div class="bookshelf"></div>
+			</div>
+		</div><!-- /container -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="docs/js/books2.js"></script>
+		<script>
+			$(function() {
+
+				Books.init();
+
+			});
+		</script>
+	</body>
+</html>
